@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>پالپ ایران | طراحی و ساخت خطوط تولید خمیر کاغذ فلاف پالپ</title>
+  <link rel="canonical" href="https://pulpiran.ir">
+  <meta name="description"
+    content="شرکت توان و تولید سلولز پایتخت (پالپ ایران)؛ اولین و بزرگترین طراح، سازنده و صادرکننده خطوط تولید خمیر کاغذ فلاف پالپ، آلفا سلولز و کاغذ از ضایعات کشاورزی در ایران با ۱۸ سال سابقه موفق.">
+  <meta name="keywords"
+    content="فلاف پالپ, خمیر کاغذ, آلفا سلولز, باگاس, لینتر پنبه, پوشک بچه, نوار بهداشتی, ساخت ماشین آلات کاغذ, پالپ ایران">
+  <meta property="og:title" content="پالپ ایران | طراحی و ساخت خطوط تولید خمیر کاغذ">
+  <meta property="og:description"
+    content="طراحی، ساخت، نصب و راه‌اندازی خطوط تولید خمیر کاغذ فلاف پالپ و آلفا سلولز با دانش فنی ۱۰۰٪ بومی.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://pulpiran.ir">
+  <meta property="og:image" content="https://hot.ir-central1.arvanstorage.ir/pulp/assets/logo.avif">
+  <link rel="dns-prefetch" href="https://metisai.ir">
+  <meta name="theme-color" content="#e5edf5">
+  <style>
+    @layer base, components, utilities;
+
+    @layer base {
+      @font-face {
+        font-family: "Vazirmatn Variable";
+        font-style: normal;
+        font-display: swap;
+        font-weight: 100 900;
+        src: url("https://hot.ir-central1.arvanstorage.ir/pulp/assets/vazirmatn.woff2") format(woff2);
+      }
+
+      @property --ai-angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+
+      :root {
+        --bg: #e5edf5;
+        --shadow-dark: rgba(95, 157, 231, 0.45);
+        --shadow-light: rgba(255, 255, 255, 0.9);
+        --text-primary: #2d3748;
+        --text-secondary: #5b6b80;
+        --accent-darken: #c95e00;
+        --accent: #e75a08;
+        --radius: 24px;
+        --transition: 0.4s ease-in-out;
+        --raised: -8px -8px 16px var(--shadow-light), 8px 8px 16px var(--shadow-dark);
+        --hero: -15px -15px 30px var(--shadow-light), 15px 15px 30px var(--shadow-dark);
+        --subtle: -4px -4px 8px var(--shadow-light), 4px 4px 8px var(--shadow-dark);
+        --pressed: inset 6px 6px 12px var(--shadow-dark), inset -6px -6px 12px var(--shadow-light);
+        --pressed-deep: inset 10px 10px 20px var(--shadow-dark), inset -10px -10px 20px var(--shadow-light);
+        --morph-open-dur: 450ms;
+        --morph-close-dur: 350ms;
+        --morph-ease: cubic-bezier(0.34, 1.3, 0.64, 1);
+        --morph-close-ease: cubic-bezier(0.25, 1, 0.5, 1);
+        --tl-path-len: 678;
+        color-scheme: light;
+        font-family: 'Vazirmatn Variable', system-ui, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        background-color: var(--bg);
+      }
+
+      :focus-visible {
+        outline: 2px solid var(--accent);
+        outline-offset: 2px;
+      }
+
+      body {
+        display: flex;
+        flex-direction: column;
+        height: 100svh;
+        timeline-scope: --services-track, --section-landing, --section-services, --section-products, --section-footer;
+        color: var(--text-primary);
+        margin: 0;
+        overflow: hidden;
+      }
+
+      main {
+        container-type: inline-size;
+        container-name: main-container;
+        overflow-y: scroll;
+        scroll-snap-type: y proximity;
+        scroll-behavior: smooth;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        width: 100%;
+        scrollbar-color: var(--accent-darken) transparent;
+        scroll-padding-block: 3rem;
+        padding-block-start: 3rem;
+        align-items: center;
+      }
+
+      h2 {
+        font-size: clamp(2rem, 2.8vw, 4rem);
+        text-align: center;
+        font-weight: 700;
+        text-wrap: balance;
+      }
+
+      h3 {
+        font-size: 1rem;
+        margin-bottom: 0;
+        color: var(--text-primary);
+        font-weight: 600;
+      }
+
+      p {
+        line-height: 1.8;
+        color: var(--text-secondary);
+        padding: 0 1rem;
+        text-wrap: pretty;
+      }
+    }
+
+    @layer components {
+      header {
+        position: fixed;
+        top: 1.3rem;
+        left: 50%;
+        transform: translateX(-50%);
+        z-index: 10;
+        width: fit-content;
+      }
+
+      nav {
+        display: flex;
+        background-color: var(--bg);
+        border-radius: 40px;
+        box-shadow: var(--raised);
+        border: 2px solid rgba(255, 255, 255, 0.4);
+        align-items: center;
+        padding: 0.3rem 0.6rem;
+      }
+      nav ul {
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        gap: 0.25rem;
+      }
+
+      nav a {
+        text-decoration: none;
+        color: var(--text-secondary);
+        font-weight: bold;
+        font-size: 0.85rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 30px;
+        transition: var(--transition);
+        display: block;
+      }
+      nav a:hover {
+        color: var(--accent);
+      }
+
+      #landing    { view-timeline-name: --section-landing; }
+      #services   { view-timeline-name: --section-services; }
+      #products   { view-timeline-name: --section-products; }
+      #footer-section { view-timeline-name: --section-footer; }
+
+      @supports (animation-timeline: view()) {
+        nav a {
+          animation: nav-active 1s linear both;
+          animation-timeline: var(--section-timeline);
+          animation-range: entry 45% exit 0%;
+        }
+      }
+
+      @keyframes nav-active {
+        0%   { color: var(--text-secondary); box-shadow: none; }
+        1%   { color: var(--accent); box-shadow: var(--pressed); }
+        99%  { color: var(--accent); box-shadow: var(--pressed); }
+        100% { color: var(--text-secondary); box-shadow: none; }
+      }
+
+      main > section,
+      main > footer {
+        display: flex;
+        width: min(90vw, 900px);
+        scroll-snap-align: start;
+        box-sizing: border-box;
+        gap: 2rem;
+        flex-direction: column;
+        align-items: center;
+        min-height: 100svh;
+        padding: 2.5rem 1.5rem;
+        margin: 0 auto;
+        flex-shrink: 0;
+        content-visibility: auto;
+        contain-intrinsic-size: auto 100svh;
+      }
+
+      #footer-section {
+        min-height: fit-content;
+        margin-top: 4rem;
+        margin-bottom: 4rem;
+      }
+
+      .accent-text { color: var(--accent); }
+
+      .btn {
+        background-color: var(--bg);
+        color: var(--text-primary);
+        border: 2px solid rgb(255 255 255 / 15%);
+        padding: 0.8rem 1.2rem;
+        border-radius: 18px;
+        box-shadow: var(--raised);
+        font-weight: 500;
+        cursor: pointer;
+        display: inline-flex;
+        text-decoration: none;
+        font-family: inherit;
+        font-size: 0.95em;
+        width: fit-content;
+        justify-content: center;
+        white-space: nowrap;
+        align-items: center;
+      }
+      .btn:hover { color: var(--accent-darken); transition: var(--transition); transform: translateY(-2px); }
+      .btn:active, .btn:focus { box-shadow: var(--pressed); transform: translateY(0); }
+
+      .landing-headline { display: flex; flex-direction: column; align-items: center; gap: 0.75rem; width: 100%; text-align: center; margin: 0 0 1.5rem 0; }
+      .fixed-part { display: block; width: 100%; text-align: center; color: var(--text-primary); font-weight: 800; font-size: clamp(1.5rem, 4vw, 3.2rem); line-height: 1.4; text-wrap: balance; }
+      .dynamic-part-wrapper { display: grid; width: 100%; place-items: center; }
+      .dynamic-text-item { grid-area: 1 / 1; width: 100%; color: var(--accent); font-weight: 800; font-size: clamp(1.2rem, 3vw, 2.2rem); opacity: 0; animation: text-rotate 12.6s infinite ease-in-out; line-height: 1.5; text-align: center; text-wrap: balance; }
+      .dynamic-text-item:nth-child(1) { animation-delay: 0s; }
+      .dynamic-text-item:nth-child(2) { animation-delay: 4.2s; }
+      .dynamic-text-item:nth-child(3) { animation-delay: 8.4s; }
+
+      @keyframes text-rotate {
+        0% { opacity: 0; transform: translateY(15px) scale(0.92); }
+        4% { opacity: 1; transform: translateY(0) scale(1); }
+        29.33% { opacity: 1; transform: translateY(0) scale(1); }
+        33.33% { opacity: 0; transform: translateY(-15px) scale(0.92); }
+        100% { opacity: 0; transform: translateY(15px) scale(0.92); }
+      }
+
+      #landing { flex-direction: row; }
+      #landing img { width: min(75vw, 275px); height: auto; filter: drop-shadow(rgba(95,157,231,0.45) 10px 10px 14px) drop-shadow(rgb(255,255,255) -10px -10px 14px); aspect-ratio: 1; object-fit: contain; flex: 1; }
+      .hero-text { display: flex; flex: 2; gap: 1rem; align-items: center; justify-content: center; align-content: flex-start; flex-wrap: wrap; }
+      .hero-text .actions { gap: 1.4rem; display: flex; }
+
+      .products-grid { display: flex; gap: 3.5rem; width: 100%; flex-wrap: wrap; justify-content: center; }
+      .product-card { background: var(--bg); padding: 0 0 2rem; border-radius: var(--radius); box-shadow: var(--raised); transition: var(--transition); text-align: center; display: flex; flex-direction: column; align-items: center; cursor: pointer; border: 1px solid rgba(255,255,255,0.3); position: relative; max-width: 280px; flex: 280px; align-content: center; justify-content: space-between; content-visibility: auto; contain-intrinsic-size: 500px; }
+      .product-icon { width: 100%; height: auto; margin: 0; display: flex; align-items: center; justify-content: center; border-radius: 22px; overflow: hidden; border: 2px #e5edf5 solid; }
+      .product-icon img { width: 100%; height: 100%; object-fit: cover; }
+
+      .product-cta { position: relative; isolation: isolate; display: inline-flex; align-items: center; justify-content: center; padding: 0.8rem 1.6rem; border-radius: 16px; background-color: var(--bg); box-shadow: var(--raised); transition: background-color var(--transition), color var(--transition), transform var(--transition); cursor: pointer; color: var(--text-primary); font-family: inherit; font-weight: 700; overflow: visible; border: none; }
+      .product-cta::before { content: ''; position: absolute; inset: -1.5px; padding: 2px; border-radius: 19px; background: conic-gradient(from var(--ai-angle), #ffbc00 0deg, rgb(229 237 245) 90deg, #ffffff 180deg, #e5edf5 270deg, #ffbc00 360deg); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; z-index: -1; animation: rotate-border 5s linear infinite; }
+      .product-cta:hover, .product-cta:focus { background-color: var(--accent); color: white; }
+      .product-cta:active { box-shadow: var(--pressed); transform: translateY(2px); }
+
+      @keyframes rotate-border { to { --ai-angle: 360deg; } }
+
+      .footer-card { background: var(--bg); padding: 2rem 1rem; border-radius: 40px; box-shadow: var(--pressed-deep); text-align: center; border: 1px solid rgba(255,255,255,0.5); }
+      .newsletter { display: flex; gap: 1.5rem; max-width: 500px; margin: 2rem auto; justify-content: center; align-items: center; flex-wrap: wrap; width: 100%; }
+      .newsletter input { flex: 1; padding: 1rem 1.5rem; border-radius: 18px; border: none; background: var(--bg); box-shadow: var(--pressed); outline: none; transition: var(--transition); field-sizing: content; font-family: inherit;}
+      .newsletter input:focus { box-shadow: var(--pressed-deep); }
+
+      .contact-info-card {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 1.5rem 2.5rem;
+        justify-content: center;
+        align-items: flex-start;
+        background: var(--bg);
+        border-radius: 24px;
+        box-shadow: var(--raised);
+        border: 1px solid rgba(255, 255, 255, 0.35);
+        padding: 1.8rem 2.2rem;
+        margin: 0.5rem auto 0;
+        max-width: 650px;
+        width: fit-content;
+      }
+
+      .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 0.7rem;
+        color: var(--text-primary);
+        text-decoration: none;
+        font-size: 0.92rem;
+        font-weight: 500;
+        transition: var(--transition);
+        padding: 0.4rem 0.8rem;
+        border-radius: 14px;
+        white-space: nowrap;
+      }
+      .contact-item:hover {
+        color: var(--accent);
+        box-shadow: var(--subtle);
+      }
+
+      .contact-icon {
+        flex-shrink: 0;
+        width: 40px;
+        height: 40px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: var(--subtle);
+        color: var(--accent);
+      }
+
+      .contact-label {
+        font-size: 0.72rem;
+        color: var(--text-secondary);
+        display: block;
+        line-height: 1.3;
+      }
+      .contact-value {
+        font-size: 0.92rem;
+        color: var(--text-primary);
+        font-weight: 600;
+        line-height: 1.4;
+        direction: ltr;
+        display: block;
+      }
+
+      .social-links { display: flex; gap: 1.5rem; margin: 1.5rem auto 0.5rem; list-style: none; padding: 0; }
+      .social-btn { width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: var(--raised); color: var(--text-secondary); transition: var(--transition); text-decoration: none; }
+      .social-btn:hover, .social-btn:focus { box-shadow: var(--pressed); color: var(--accent); transform: scale(0.9); }
+
+      ::view-transition-group(support-morph) { animation-duration: var(--morph-open-dur); animation-timing-function: var(--morph-ease); }
+      ::view-transition-old(support-morph) { animation: morph-fade-out var(--morph-open-dur) var(--morph-ease) both; mix-blend-mode: normal; backface-visibility: hidden; height: 100%; width: 100%; }
+      ::view-transition-new(support-morph) { animation: morph-fade-in var(--morph-open-dur) var(--morph-ease) both; mix-blend-mode: normal; backface-visibility: hidden; height: 100%; width: 100%; }
+
+      @keyframes morph-fade-out { 0% { opacity: 1; } 100% { opacity: 0; } }
+      @keyframes morph-fade-in { 0% { opacity: 0; } 100% { opacity: 1; } }
+
+      body.is-morphing * { animation-play-state: paused !important; pointer-events: none !important; }
+
+      #ai-agent-btn { position: fixed; bottom: 2rem; left: 2rem; width: 55px; height: 55px; border-radius: 50%; background-color: var(--bg); box-shadow: var(--raised); border: 1px solid rgba(255,255,255,0.4); z-index: 999; display: grid; place-items: center; cursor: pointer; padding: 0; margin: 0; outline: none; transition: transform 0.2s ease; }
+      #ai-agent-btn::before { content: ''; position: absolute; inset: -2px; padding: 2.5px; border-radius: inherit; background: conic-gradient(from var(--ai-angle), #ffbc00 0deg, rgb(229 237 245) 90deg, #ffffff 180deg, #e5edf5 270deg, #ffbc00 360deg); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; animation: rotate-border 5s linear infinite; z-index: -1; pointer-events: none; }
+      #ai-agent-btn:hover { transform: scale(1.05); }
+      #ai-agent-btn:active { box-shadow: var(--pressed); transform: scale(0.95); }
+
+      #support-morph-container { position: fixed; background-color: var(--bg); border: 1px solid rgba(255,255,255,0.4); display: none; flex-direction: column; overflow: hidden; box-sizing: border-box; }
+      :where(#support-morph-container) { inset: auto; margin: 0; }
+      #support-morph-container:popover-open { display: flex; }
+      #support-morph-container::before { content: ''; position: absolute; inset: -3px; padding: 3px; border-radius: inherit; background: conic-gradient(from var(--ai-angle), #ffb600 0deg, rgb(229 237 245) 90deg, #ffffff 180deg, #e5edf5 270deg, #ff8d00 360deg); mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0); mask-composite: exclude; animation: rotate-border 5s linear infinite; z-index: -1; pointer-events: none; }
+
+      .chat-dialog-center { top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(calc(100vw - 40px), 420px); height: min(calc(100vh - 100px), 550px); border-radius: 24px; box-shadow: var(--hero); }
+      .chat-dialog-auth { top: 50%; left: 50%; transform: translate(-50%, -50%); width: min(calc(100vw - 40px), 360px); height: 410px; border-radius: 24px; box-shadow: var(--hero); }
+      .chat-dialog-fab { bottom: 2rem; left: 2rem; width: min(calc(100vw - 40px), 380px); height: min(calc(100vh - 100px), 520px); border-radius: 24px; box-shadow: var(--hero); }
+
+      #auth-window-content, #chat-window-content { display: none; flex-direction: column; width: 100%; height: 100%; box-sizing: border-box; }
+      .chat-header { padding: 1.5rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(255,255,255,0.2); }
+      .chat-messages { flex: 1; padding: 1.2rem; overflow-y: auto; display: flex; flex-direction: column; gap: 1.2rem; scrollbar-color: var(--accent-darken) var(--bg); scrollbar-width: thin; }
+      .chat-bubble { padding: 0.8rem 1.2rem; border-radius: 18px; max-width: 80%; font-size: 0.9rem; box-shadow: var(--subtle); line-height: 1.7; word-wrap: break-word; }
+      .chat-bubble.ai { align-self: flex-start; color: var(--text-primary); border: 1px rgb(255 255 255 / 50%) solid; border-bottom-left-radius: 4px; background-color: var(--bg); }
+      .chat-bubble.user { align-self: flex-end; background-color: var(--accent); color: white; border-bottom-right-radius: 4px; }
+      .chat-bubble strong.accent-text { color: var(--accent); }
+
+      .chat-input-area { padding: 1rem; display: flex; gap: 0.5rem; width: 100%; box-sizing: border-box; }
+      .chat-input-area input { flex: 1; padding: 0.8rem; border-radius: 15px; border: none; background: var(--bg); box-shadow: var(--pressed); outline: none; font-family: inherit; color: var(--text-primary); }
+
+      .auth-input { width: 100%; box-sizing: border-box; padding: 1rem; margin-bottom: 1rem; border-radius: 15px; border: none; background: var(--bg); box-shadow: var(--pressed); outline: none; font-family: inherit; color: var(--text-primary); transition: var(--transition); }
+      .auth-input:focus { box-shadow: var(--pressed-deep); }
+
+      .typing-indicator { display: flex; align-items: center; gap: 4px; padding: 4px 8px; }
+      .typing-indicator span { width: 8px; height: 8px; background-color: var(--accent); border-radius: 50%; display: inline-block; animation: typing-bounce 1.4s infinite ease-in-out both; }
+      .typing-indicator span:nth-child(1) { animation-delay: -0.32s; }
+      .typing-indicator span:nth-child(2) { animation-delay: -0.16s; }
+
+      @keyframes typing-bounce { 0%, 80%, 100% { transform: scale(0); } 40% { transform: scale(1); } }
+
+      .services-layout { view-timeline: --services-track block; display: flex; flex-direction: row; align-items: flex-start; width: 100%; gap: 1.5rem; justify-content: center; position: relative; }
+      .services-timeline { width: 60px; flex-shrink: 0; position: sticky; top: max(15svh, 100px); }
+      .services-cards { flex: 1; display: flex; flex-direction: column; gap: 0; max-width: 600px; padding: 0; }
+      .service-item { min-height: 160px; display: flex; align-items: center; box-sizing: border-box; scroll-snap-align: center; }
+      .service-card-new { background: var(--bg); border-radius: 20px; box-shadow: var(--raised); border: 1px solid rgba(255,255,255,0.4); padding: 1.2rem 1.4rem; transition: box-shadow var(--transition), transform var(--transition); width: 100%; }
+      .service-card-new:hover { box-shadow: var(--hero); transform: translateX(-3px); }
+      .service-card-new h3 { margin: 0 0 0.35rem; font-size: 1.05rem; }
+      .service-card-new p { margin: 0; font-size: 0.88rem; line-height: 1.75; padding: 0; }
+
+      .timeline-svg { width: 60px; height: 800px; display: block; overflow: visible; }
+      .timeline-liquid { stroke-dasharray: var(--tl-path-len); stroke-dashoffset: var(--tl-path-len); }
+      .tl-icon { opacity: 1; transform: scale(0.72); transform-box: fill-box; transform-origin: center; will-change: transform, opacity; }
+
+      @supports ((animation-timeline: view()) and (animation-range: entry)) {
+        .service-item { animation: elegant-reveal cubic-bezier(0.16, 1, 0.3, 1) both; animation-timeline: view(); animation-range: entry 25% cover 45%; }
+        .timeline-liquid { animation: liquid-draw linear both; animation-timeline: --services-track; animation-range: entry 15% cover 65%; will-change: stroke-dashoffset; }
+      }
+
+      @supports not ((animation-timeline: view()) and (animation-range: entry)) {
+        .timeline-liquid { stroke-dashoffset: 0; }
+        .service-item { opacity: 1; transform: none; }
+      }
+
+      @keyframes elegant-reveal { from { opacity: 0; transform: translateY(60px) scale(0.92); filter: blur(8px); } to { opacity: 1; transform: translateY(0) scale(1); filter: blur(0); } }
+      @keyframes liquid-draw { 0% { stroke-dashoffset: var(--tl-path-len); } 100% { stroke-dashoffset: 0; } }
+
+      @container main-container (max-width: 900px) {
+        .services-layout { gap: 0.8rem; }
+        .services-timeline { width: 60px; }
+        .service-item { min-height: 160px; }
+        .service-card-new { padding: 0.8rem 1rem; }
+        .service-card-new h3 { font-size: 0.95rem; margin-bottom: 0.25rem; }
+        .service-card-new p { font-size: 0.75rem; line-height: 1.5; }
+        #landing { flex-direction: column; }
+        #landing img { order: -1; }
+        .newsletter { flex-direction: column; }
+        .contact-info-card { flex-direction: column; align-items: center; gap: 1rem; padding: 1.5rem; }
+      }
+    }
+
+    @layer utilities {
+      .visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; pointer-events: none; }
+      .fade-up { opacity: 0; transform: translateY(30px); animation: reveal both; animation-timeline: view(); animation-range: entry 10% cover 30%; }
+      @keyframes reveal { to { opacity: 1; transform: translateY(0); } }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
+      .timeline-liquid { stroke-dashoffset: 0; }
+      .tl-icon { transform: scale(0.72) !important; }
+      ::view-transition-group(*), ::view-transition-old(*), ::view-transition-new(*) { animation: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <nav aria-label="منوی اصلی">
+      <ul>
+        <li><a href="#services" style="--section-timeline: --section-services">خدمات</a></li>
+        <li><a href="#products" style="--section-timeline: --section-products">محصولات</a></li>
+        <li><a href="#footer-section" style="--section-timeline: --section-footer">ارتباط</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section id="landing">
+      <div class="hero-text">
+        <h1 class="landing-headline">
+          <span class="fixed-part">طراحی، ساخت، نصب و راه‌اندازی</span>
+          <span class="dynamic-part-wrapper">
+            <span class="dynamic-text-item">خطوط تولید خمیر کاغذ فلاف پالپ</span>
+            <span class="dynamic-text-item">خطوط تولید آلفا سلولز از پنبه و ساقه موز</span>
+            <span class="dynamic-text-item">خطوط تولید خمیر کاغذ از ضایعات کشاورزی و باگاس</span>
+          </span>
+        </h1>
+        <div class="actions">
+          <a class="btn" href="#footer-section">مشاوره رایگان</a>
+          <a class="btn" href="#products">مشاهده محصولات</a>
+        </div>
+      </div>
+      <img src="https://hot.ir-central1.arvanstorage.ir/pulp/assets/logo.avif" fetchpriority="high" width="275" height="275" alt="پالپ ایران - طراح خطوط تولید خمیر کاغذ">
+    </section>
+    <section id="services">
+      <h2 class="fade-up">خدمات <span class="accent-text">تخصصی</span></h2>
+      <div class="services-layout">
+        <div class="services-timeline" aria-hidden="true">
+          <svg class="timeline-svg" viewBox="0 0 60 800" xmlns="http://www.w3.org/2000/svg"
+            preserveAspectRatio="xMidYMid meet">
+            <defs>
+              <filter id="pressed-inner" x="-20%" y="-2%" width="140%" height="104%">
+                <feOffset dx="2" dy="2" in="SourceAlpha" result="offDark" />
+                <feGaussianBlur stdDeviation="2.5" in="offDark" result="blurDark" />
+                <feComposite operator="out" in="SourceAlpha" in2="blurDark" result="invDark" />
+                <feFlood flood-color="rgba(95,157,231,0.7)" result="colorDark" />
+                <feComposite operator="in" in="colorDark" in2="invDark" result="shadowDark" />
+                <feOffset dx="-2" dy="-2" in="SourceAlpha" result="offLight" />
+                <feGaussianBlur stdDeviation="2.5" in="offLight" result="blurLight" />
+                <feComposite operator="out" in="SourceAlpha" in2="blurLight" result="invLight" />
+                <feFlood flood-color="rgba(255,255,255,1)" result="colorLight" />
+                <feComposite operator="in" in="colorLight" in2="invLight" result="shadowLight" />
+                <feMerge>
+                  <feMergeNode in="shadowDark" />
+                  <feMergeNode in="shadowLight" />
+                </feMerge>
+              </filter>
+              <clipPath id="liquid-clip">
+                <path
+                  d="M 30,61 A 19 19 0 0 1 33,98.762 L 33,221.238 A 19 19 0 0 1 33,258.762 L 33,381.238 A 19 19 0 0 1 33,418.762 L 33,541.238 A 19 19 0 0 1 33,578.762 L 33,701.238 A 19 19 0 0 1 30,739 A 19 19 0 0 1 27,701.238 L 27,578.762 A 19 19 0 0 1 27,541.238 L 27,418.762 A 19 19 0 0 1 27,381.238 L 27,258.762 A 19 19 0 0 1 27,221.238 L 27,98.762 A 19 19 0 0 1 30,61 Z" />
+              </clipPath>
+            </defs>
+            <path fill="var(--bg)"
+              d="M 30,58 A 22 22 0 0 1 36,101.166 L 36,218.834 A 22 22 0 0 1 36,261.166 L 36,378.834 A 22 22 0 0 1 36,421.166 L 36,538.834 A 22 22 0 0 1 36,581.166 L 36,698.834 A 22 22 0 0 1 30,742 A 22 22 0 0 1 24,698.834 L 24,581.166 A 22 22 0 0 1 24,538.834 L 24,421.166 A 22 22 0 0 1 24,378.834 L 24,261.166 A 22 22 0 0 1 24,218.834 L 24,101.166 A 22 22 0 0 1 30,58 Z" />
+            <path class="timeline-liquid" clip-path="url(#liquid-clip)" fill="none" stroke="var(--accent)"
+              stroke-width="38" stroke-linecap="round" d="M 30,61 L 30,739" />
+            <path fill="white" filter="url(#pressed-inner)" style="pointer-events: none;"
+              d="M 30,58 A 22 22 0 0 1 36,101.166 L 36,218.834 A 22 22 0 0 1 36,261.166 L 36,378.834 A 22 22 0 0 1 36,421.166 L 36,538.834 A 22 22 0 0 1 36,581.166 L 36,698.834 A 22 22 0 0 1 30,742 A 22 22 0 0 1 24,698.834 L 24,581.166 A 22 22 0 0 1 24,538.834 L 24,421.166 A 22 22 0 0 1 24,378.834 L 24,261.166 A 22 22 0 0 1 24,218.834 L 24,101.166 A 22 22 0 0 1 30,58 Z" />
+            <g transform="translate(30, 80)">
+              <g class="tl-icon" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-12, -12)">
+                  <path
+                    d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z" />
+                  <path
+                    d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18" />
+                  <path d="m2.3 2.3 7.286 7.286" />
+                  <circle cx="11" cy="11" r="2" />
+                </g>
+              </g>
+            </g>
+            <g transform="translate(30, 240)">
+              <g class="tl-icon" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-12, -12)">
+                  <path
+                    d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.106-3.105c.32-.322.863-.22.983.218a6 6 0 0 1-8.259 7.057l-7.91 7.91a1 1 0 0 1-2.999-3l7.91-7.91a6 6 0 0 1 7.057-8.259c.438.12.54.662.219.984z" />
+                </g>
+              </g>
+            </g>
+            <g transform="translate(30, 400)">
+              <g class="tl-icon" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-12, -12)">
+                  <path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5" />
+                  <path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09" />
+                  <path d="M9 12a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.4 22.4 0 0 1-4 2z" />
+                  <path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 .05 5 .05" />
+                </g>
+              </g>
+            </g>
+            <g transform="translate(30, 560)">
+              <g class="tl-icon" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-12, -12)">
+                  <path
+                    d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526" />
+                  <circle cx="12" cy="8" r="6" />
+                </g>
+              </g>
+            </g>
+            <g transform="translate(30, 720)">
+              <g class="tl-icon" fill="none" stroke="white" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <g transform="translate(-12, -12)">
+                  <path
+                    d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z" />
+                  <path d="m9 12 2 2 4-4" />
+                </g>
+              </g>
+            </g>
+          </svg>
+        </div>
+        <div class="services-cards">
+          <section class="service-item">
+            <div class="service-card-new">
+              <h3>طراحی حرفه‌ای</h3>
+              <p>طراحی و مهندسی خطوط تولید خمیر کاغذ بهداشتی (Fluff Pulp) در ظرفیت‌های ۵ تا ۱۰۰ تن در روز با دانش فنی
+                ۱۰۰٪ بومی و کیفیت رقابتی با نمونه‌های جهانی.</p>
+            </div>
+          </section>
+          <section class="service-item">
+            <div class="service-card-new">
+              <h3>ساخت ماشین‌آلات</h3>
+              <p>ساخت تمامی ماشین‌آلات و تجهیزات خطوط تولید فلاف پالپ با استفاده از دانش فنی ۱۰۰٪ بومی و مواد اولیه با
+                کیفیت.</p>
+            </div>
+          </section>
+          <section class="service-item">
+            <div class="service-card-new">
+              <h3>راه‌اندازی خط تولید</h3>
+              <p>نصب، راه‌اندازی و آموزش کامل کارکنان شامل تولید، کنترل کیفیت، مدیریت فروش, انبارداری و حسابداری.</p>
+            </div>
+          </section>
+          <section class="service-item">
+            <div class="service-card-new">
+              <h3>گارانتی یک ساله</h3>
+              <p>گارانتی یک ساله قطعات (به غیر از قطعات الکتریکی) و حضور عوامل فنی تا پایان راه‌اندازی و تضمین کیفیت
+                تولید.</p>
+            </div>
+          </section>
+          <section class="service-item">
+            <div class="service-card-new">
+              <h3>۱۰ سال خدمات پس از فروش</h3>
+              <p>پشتیبانی ۲۴ ساعته تلفنی برای رفع مشکلات فنی، تأمین مواد اولیه حداقل یک سال و انعقاد قرارداد فروش محصول
+                تولیدی.</p>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+
+    <section id="products">
+      <h2 class="fade-up">محصولات و <span class="accent-text">تکنولوژی‌ها</span></h2>
+      <div class="products-grid">
+        <article class="product-card fade-up" tabindex="0">
+          <div class="product-icon"><img alt="رول خمیر فلاف پالپ تصفیه شده و معمولی" src="https://hot.ir-central1.arvanstorage.ir/pulp/assets/rolled.avif"
+              loading="lazy" width="280" height="280" decoding="async"></div>
+          <h3>خمیر فلاف پالپ</h3>
+          <p>ماده اولیه اصلی تولید پوشک بچه، نوار بهداشتی و پدهای بیمارستانی. تولید در دو نوع تصفیه شده (Treated) و
+            معمولی.</p>
+          <button class="product-cta" data-product="خمیر فلاف پالپ" command="show-popover"
+            commandfor="support-morph-container">درخواست مشاوره</button>
+        </article>
+        <article class="product-card fade-up" tabindex="0">
+          <div class="product-icon"><img alt="آلفا سلولز باکیفیت تهیه شده از لینتر پنبه" src="https://hot.ir-central1.arvanstorage.ir/pulp/assets/linter.avif"
+              loading="lazy" width="280" height="280" decoding="async"></div>
+          <h3>آلفا سلولز (لینتر پنبه)</h3>
+          <p>تولید خمیر کاغذ با کیفیت بسیار بالا از لینتر پنبه جهت استفاده در صنایع حساس شیمیایی و استراتژیک.</p>
+          <button class="product-cta" data-product="آلفا سلولز (لینتر پنبه)" command="show-popover"
+            commandfor="support-morph-container">درخواست مشاوره</button>
+        </article>
+        <article class="product-card fade-up" tabindex="0">
+          <div class="product-icon"><img alt="تولید خمیر کاغذ اقتصادی و باکیفیت از باگاس و ضایعات کشاورزی"
+              src="https://hot.ir-central1.arvanstorage.ir/pulp/assets/fluff.avif" loading="lazy" width="280" height="280" decoding="async"></div>
+          <h3>خمیر از باگاس</h3>
+          <p>بهره‌گیری از ضایعات کشاورزی (باگاس) برای تولید خمیر کاغذ؛ راهکاری پایدار و اقتصادی برای جایگزینی منابع
+            چوبی.</p>
+          <button class="product-cta" data-product="خمیر از باگاس" command="show-popover"
+            commandfor="support-morph-container">درخواست مشاوره</button>
+        </article>
+      </div>
+    </section>
+
+    <footer id="footer-section" class="footer-card fade-up">
+      <h2>آماده راه‌اندازی <span class="accent-text">خط تولید</span> خود هستید؟</h2>
+      <p>با ۱۸ سال سابقه و اجرای ۱۷ پروژه موفق در سراسر ایران، ما از صفر تا صد در کنار شما هستیم.</p>
+      <form class="newsletter" method="post">
+        <input placeholder="ایمیل یا شماره تماس شما..." type="text" required aria-label="ایمیل یا شماره تماس">
+        <button class="btn" type="submit">ثبت درخواست</button>
+      </form>
+
+      <div class="contact-info-card" aria-label="اطلاعات تماس پالپ ایران">
+        <!-- Mobile -->
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="5" y="2" width="14" height="20" rx="2" ry="2" />
+              <line x1="12" y1="18" x2="12.01" y2="18" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-label">همراه</span>
+            <a href="tel:09121798057" class="contact-value" style="text-decoration:none;color:inherit;">0912 179
+              8057</a>
+            <a href="tel:09122346800" class="contact-value" style="text-decoration:none;color:inherit;">0912 234
+              6800</a>
+          </div>
+        </div>
+        <!-- Landline -->
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-label">ثابت</span>
+            <a href="tel:02188673823" class="contact-value" style="text-decoration:none;color:inherit;">021 8867
+              3823</a>
+            <a href="tel:02188673822" class="contact-value" style="text-decoration:none;color:inherit;">021 8867
+              3822</a>
+          </div>
+        </div>
+        <!-- Email -->
+        <div class="contact-item">
+          <div class="contact-icon" aria-hidden="true">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round">
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+          </div>
+          <div>
+            <span class="contact-label">ایمیل</span>
+            <a href="mailto:info@pulpiran.ir" class="contact-value"
+              style="text-decoration:none;color:inherit;">info@pulpiran.ir</a>
+          </div>
+        </div>
+      </div>
+
+      <ul class="social-links" aria-label="شبکه‌های اجتماعی پالپ ایران">
+        <li><a href="#" class="social-btn" title="اینستاگرام" aria-label="اینستاگرام پالپ ایران"><svg width="22"
+              height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg></a></li>
+        <li><a href="https://wa.me/989121798057" class="social-btn" title="واتس اپ" aria-label="واتس اپ پالپ ایران"><svg
+              width="32" height="32" viewBox="0 0 640 640" fill="currentColor" stroke="currentColor"
+              stroke-linecap="round" stroke-linejoin="round">
+              <path
+                d="M476.9 161.1C435 119.1 379.2 96 319.9 96C197.5 96 97.9 195.6 97.9 318C97.9 357.1 108.1 395.3 127.5 429L96 544L213.7 513.1C246.1 530.8 282.6 540.1 319.8 540.1L319.9 540.1C442.2 540.1 544 440.5 544 318.1C544 258.8 518.8 203.1 476.9 161.1zM319.9 502.7C286.7 502.7 254.2 493.8 225.9 477L219.2 473L149.4 491.3L168 423.2L163.6 416.2C145.1 386.8 135.4 352.9 135.4 318C135.4 216.3 218.2 133.5 320 133.5C369.3 133.5 415.6 152.7 450.4 187.6C485.2 222.5 506.6 268.8 506.5 318.1C506.5 419.9 421.6 502.7 319.9 502.7zM421.1 364.5C415.6 361.7 388.3 348.3 383.2 346.5C378.1 344.6 374.4 343.7 370.7 349.3C367 354.9 356.4 367.3 353.1 371.1C349.9 374.8 346.6 375.3 341.1 372.5C308.5 356.2 287.1 343.4 265.6 306.5C259.9 296.7 271.3 297.4 281.9 276.2C283.7 272.5 282.8 269.3 281.4 266.5C280 263.7 268.9 236.4 264.3 225.3C259.8 214.5 255.2 216 251.8 215.8C248.6 215.6 244.9 215.6 241.2 215.6C237.5 215.6 231.5 217 226.4 222.5C221.3 228.1 207 241.5 207 268.8C207 296.1 226.9 322.5 229.6 326.2C232.4 329.9 268.7 385.9 324.4 410C359.6 425.2 373.4 426.5 391 423.9C401.7 422.3 423.8 410.5 428.4 397.5C433 384.5 433 373.4 431.6 371.1C430.3 368.6 426.6 367.2 421.1 364.5z" />
+            </svg></a></li>
+        <li><a href="#" class="social-btn" title="لینکدین" aria-label="لینکدین پالپ ایران"><svg width="22" height="22"
+              viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+              <rect x="2" y="9" width="4" height="12" />
+              <circle cx="4" cy="4" r="2" />
+            </svg></a></li>
+      </ul>
+      <p style="margin-top: 3rem; font-size: 0.8rem;">© ۲۰۲۶ شرکت توان و تولید سلولز پایتخت (پالپ ایران). تمامی حقوق
+        محفوظ است.</p>
+    </footer>
+  </main>
+
+  <button id="ai-agent-btn" title="پشتیبانی هوشمند" aria-label="باز کردن پشتیبانی هوشمند" command="show-popover"
+    commandfor="support-morph-container">
+    <svg width="34" height="34" viewBox="0 0 512 512">
+      <path fill="var(--text-primary)"
+        d="M310.102 87.893c11.602.396 23.238.365 34.798 1.286 18.272 1.455 34.685 7.63 48.757 19.933 14.62 12.784 24.732 28.097 28.596 47.202 1.302 6.438 2.345 13.043 2.456 19.589.519 30.628 1.022 61.264.812 91.893-.111 16.193-2.248 32.155-10.531 46.763-14.508 25.586-35.5 42.299-64.937 46.204-15.061 1.998-30.48 2.275-45.699 1.868-20.578-.551-38.18 5.793-54.203 18.388-10.845 8.525-22.474 16.054-33.735 24.053-9.783 6.95-20.645 7.075-30.297 1.545-9.718-5.569-15.686-14.931-15.011-27.014.161-2.883 1.255-5.712 1.895-8.572 1.261-5.636-.72-8.43-6.563-8.124-11.369.595-22.69-.594-33.12-4.529-11.068-4.175-20.927-11.07-28.654-20.43-10.553-12.786-16.43-27.354-16.705-44.956-.005-19.214.03-37.519-.016-55.824-.004-1.728-.513-3.455-.788-5.183.323-17.889.17-35.803 1.113-53.659.808-15.326 2.796-30.582 10.765-44.303 14.193-24.44 34.537-40.453 63.011-43.788 15.887-1.86 32.026-1.574 48.975-2.275 33.642-.036 66.361-.051 99.08-.067zm-159.068 29.319c-7.165 4.902-15.207 8.909-21.313 14.892-13.082 12.818-17.478 29.676-17.66 47.424-.394 38.316-.275 76.638-.247 114.957.013 17.398 13.227 34.504 28.807 40.808 9.233 3.736 18.617 3.426 28.14 3.786 9.852.373 18.067 4.228 23.599 12.863 5.092 7.95 6.673 16.23 3.796 25.474-.699 2.248.984 5.913 2.51 7.531 1.085 1.148 5.277.856 7.012-.343 12.342-8.523 24.53-17.284 36.535-26.279 16.488-12.354 34.861-19.058 55.486-19.302 11.661-.138 23.328.125 34.988-.07 14.07-.235 27.468-2.748 39.54-10.856 18.588-12.484 29.341-29.545 29.723-51.948.549-32.142.305-64.302.01-96.451-.14-15.245-3.156-29.82-13.006-42.26-6.09-7.69-13.139-14.257-21.985-18.426-12.507-5.895-26.001-7.15-39.658-7.147-46.651.015-93.303.03-139.954.001-11.788-.007-23.332 1.499-35.323 5.345z" />
+      <path fill="var(--text-primary)"
+        d="M263.049 210.712c11.775 4.517 12.536 21.685 1.424 28.173-5.013 2.927-15.212 2.038-18.898-1.867-4.884-5.174-6.193-14.262-2.889-20.058 3.338-5.857 11.124-8.969 17.652-7.069.79.23 1.599.392 2.711.821z" />
+      <path fill="var(--text-primary)"
+        d="M207.688 232.448c-4.874 8.774-15.076 11.001-24.003 5.333-6.28-3.988-7.421-16.064-2.58-22.756 4.23-5.847 13.685-7.402 20.831-3.425 6.392 3.557 9.292 11.529 6.636 18.184-.299.749-.475 1.547-.884 2.664z" />
+      <path fill="var(--text-primary)"
+        d="M312 239.287c-5.991-3.186-8.784-8.632-8.692-14.259.106-6.479 3.667-12.024 10.213-14.854 5.37-2.322 13.757-.519 18.22 5.14 4.485 5.687 4.185 12.392 1.085 17.98-3.78 6.813-10.615 8.465-17.263 7.291-1.114-.196-2.176-.693-3.563-1.298z" />
+    </svg>
+  </button>
+
+  <div id="support-morph-container" popover="manual">
+    <div id="auth-window-content">
+      <div class="chat-header"><span style="font-weight: 800; color: var(--accent);">ورود و شروع مشاوره</span><button
+          id="closeAuthBtn" command="hide-popover" commandfor="support-morph-container"
+          style="background: none; border: none; cursor: pointer; color: var(--text-secondary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center;"
+          aria-label="بستن چت">✕</button></div>
+      <form id="authForm"
+        style="flex: 1; display: flex; flex-direction: column; justify-content: center; padding: 2rem; box-sizing: border-box;">
+        <p style="text-align: center; margin-bottom: 2rem; font-size: 0.9em; color: var(--text-secondary);">لطفاً جهت
+          آغاز گفتگوی هوشمند تخصصی اطلاعات خود را وارد نمایید.</p>
+        <input id="authName" class="auth-input" placeholder="نام و نام خانوادگی" type="text"
+          aria-label="نام و نام خانوادگی" autocomplete="name" required>
+        <input id="authPhone" class="auth-input" placeholder="شماره تماس" type="tel" aria-label="شماره تماس"
+          autocomplete="tel" required>
+        <button id="authSubmit" type="submit" class="btn"
+          style="width: 100%; justify-content: center; background-color: var(--accent); color: white; border: none;">ورود
+          به گفتگو</button>
+      </form>
+    </div>
+    <div id="chat-window-content">
+      <div class="chat-header"><span style="font-weight: 800; color: var(--accent);">پشتیبانی و مشاوره
+          هوشمند</span><button id="closeChatBtn" command="hide-popover" commandfor="support-morph-container"
+          style="background: none; border: none; cursor: pointer; color: var(--text-secondary); font-size: 1.2rem; display: flex; align-items: center; justify-content: center;"
+          aria-label="بستن چت">✕</button></div>
+      <div class="chat-messages" id="chatMessages" role="log" aria-live="polite" aria-label="تاریخچه پیام‌های چت"></div>
+      <form id="chatForm" class="chat-input-area">
+        <input id="chatInput" placeholder="سوال خود را بنویسید..." type="text" aria-label="پیام شما" autocomplete="off">
+        <button id="chatSendBtn" type="submit" class="btn" style="padding: 0.5rem 1rem;" aria-label="ارسال پیام"><svg
+            fill="none" height="20" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" width="20">
+            <line x1="22" x2="11" y1="2" y2="13"></line>
+            <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+          </svg></button>
+      </form>
+    </div>
+  </div>
+  <script src="https://hot.ir-central1.arvanstorage.ir/pulp/assets/script.js" async></script>
+</body>
+</html>
